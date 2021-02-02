@@ -1,0 +1,12 @@
+title: GA4GH GKS Variation Profile
+name: varprof
+id: https://???/ga4gh/varprof
+
+description: blah, blah variation stuff
+license: https://creativecommons.org/publicdomain/zero/1.0/
+version: 1.1.1
+
+
+imports:
+  - ga4gh:vrs
+  - ga4gh:vod

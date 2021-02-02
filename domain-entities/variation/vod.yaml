@@ -1,0 +1,11 @@
+title: GA4GH GKS VRS value object descriptor
+name: vod
+id: https://???/ga4gh/vod
+
+description: blah, blah variation stuff
+license: https://creativecommons.org/publicdomain/zero/1.0/
+version: 1.1.1
+
+
+imports:
+  - ga4gh:vrs

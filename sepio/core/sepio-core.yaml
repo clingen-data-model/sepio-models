@@ -1,0 +1,20 @@
+title: Core SEPIO Biolink entities
+name: core
+id: https://???/sepio/core
+
+description: Framework core entity definitions for the sepio model
+license: https://creativecommons.org/publicdomain/zero/1.0/
+version: 1.1.1
+
+
+#==================================
+# Common type definitions
+#
+# Definition consists of:
+#    <name>:   type name
+#      uri:    RDF datatype
+#      base:   python base type
+#      repr:   representational form in yaml/python if different than representation in base
+#      (additional metadata)
+#==================================
+types:
