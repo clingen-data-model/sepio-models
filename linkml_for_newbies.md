@@ -40,5 +40,28 @@ Some dev packages are also provided. These are needed to run the analysis
 notebooks. If you only wish to rebuild artifacts using the built-in tools,
 you may omit the `--dev` flag from the pipenv installation.
 
+- `jupyterlab` is for [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/),
+  an IDE for Project Jupyter (and Jupyter Notebooks).
+- `yamlmagic` is for [directly importing YAML]()
+  to the notebook python kernel.
+
+## Writing LinkML
+LinkML is pretty cool, but can be overwhelming to users that are not familiar
+with the language (or, at least it was overwhelming to me 😵).
+
+This section is an attempt to describe and link the salient elements of a LinkML
+model in plain english.
+
+While a YAML doesn't have a traditional header, there are a number of attributes
+found throughout the LinkML and BioLink Model documentation that need to be
+specified before you can get to the fun part of modeling the schema.
+
+### id
+The very first line of every model should be the id:
+```yaml
+id: https://example.org/example-schema
+```
+The purpose of this id is ...
+
 ## Related reading
 - [General Design of LinkML](https://github.com/biolink/biolinkml/blob/master/SPECIFICATION.md)
