@@ -78,16 +78,16 @@ https://vrs.ga4gh.org).
 
 ### name
 The only other required field is the schema `name`. In markdown, this is
-specified as `SchemaDefinition->name`, to differentiate it from the `name`
+specified as `schema_definition->name`, to differentiate it from the `name`
 slot in other classes. In LinkML, slots are defined separate from classes and
 can have [custom definitions](https://biolink.github.io/biolinkml/docs/slot_usage.html)
 based on the class context in which it is used.
 
 The name is a space separated short label for the document, such as
-`example schema` or `Bob's schema for the UK`.
+`example schema`, `Bob's schema for the UK`, or `widgets`.
 
 ### prefixes
-Prefixes are used to transform CURIEs into URIs. For example:
+`Prefixes` are used to transform CURIEs into URIs. For example:
 ```yaml
 prefixes:
   biolinkml: https://w3id.org/biolink/biolinkml/
@@ -96,13 +96,29 @@ prefixes:
 ```
 The CURIE `wgs:lat` will expand to http://www.w3.org/2003/01/geo/wgs84_pos#lat.
 
+### default_prefix and default_range
+`default_prefix` is used as the prefix when not otherwise specified for objects
+defined within the schema.
+
+`default_range` is used as the range when not otherwise specified for objects
+defined within the schema.
+
+```yaml
+default_prefix: widget
+default_range: string
+```
+
+### default_curi_maps and emit_prefixes:
+`default_curi_maps` is a list of predefined prefixes specified at the [prefix
+commons](https://github.com/prefixcommons/biocontext/tree/master/registry).
+
 ### imports
 Imports are used to import other schema into the main schema document. One of
 the objectives of this repository is to separate out schema components into
 separate modules around their intended use, and so we will need to implement
 imports. The BioLink Model repo [imports
 `biolinkml:types`](https://github.com/biolink/biolink-model/blob/master/biolink-model.yaml#L172-L173)
-to [refer to the LinkML types](https://github.com/biolink/biolinkml/blob/master/includes/types.py).
+to [refer to the LinkML types](https://github.com/biolink/biolinkml/blob/master/includes/types.yaml).
 
 ```yaml
 prefixes:
@@ -111,6 +127,11 @@ prefixes:
 imports:
   - biolinkml:types
 ```
+
+**TODO:** Figure out how imports are executed–the above `biolinkml` URI [doesn't
+resolve](https://biolink.github.io/biolinkml/includes/types), so how do those
+types compile into BioLink Model artifacts? Or is it a false assumption that
+they do at all?
 
 ## Related reading
 - [General Design of LinkML](https://github.com/biolink/biolinkml/blob/master/SPECIFICATION.md)
