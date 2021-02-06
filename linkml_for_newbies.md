@@ -49,12 +49,12 @@ you may omit the `--dev` flag from the pipenv installation.
 LinkML is pretty cool, but can be overwhelming to users that are not familiar
 with the language (or, at least it was overwhelming to me 😵).
 
-While a YAML doesn't have a traditional header, there are a number of attributes
-found throughout the LinkML and BioLink Model documentation that need to be
-specified before you can get to the fun part of modeling the schema.
+There are a number of attributes found throughout the LinkML and BioLink Model
+documentation that should be described before you can get to the fun part of
+modeling the schema.
 
-This section is an attempt to describe and link the salient elements of a LinkML
-schema in plain english. When referencing the LinkML documentation, you will
+This section is an attempt to summarize the salient elements of a LinkML
+schema in simple terms. When referencing the LinkML documentation, you will
 note that LinkML is often referred to as BioLinkML, or _blml_. For the reasons
 indicated [above](#the-biolinkml-package), these terms are to be treated as
 synonymous with LinkML.
