@@ -1,8 +1,8 @@
 # LinkML for Newbies
 This is a guide to getting started with LinkML and the ClinGen / VICC
-SEPIO / VA LinkML models. It is intended to give a ground-up tour of the models
-and the artifacts they generate, as well as the language and tools surrounding
-their use.
+SEPIO / VA LinkML schemas. It is intended to give a ground-up tour of the
+schemas and the artifacts they generate, as well as the language and tools
+surrounding their use.
 
 ## Why this guide
 Many of the tools, utilities, and resources surrounding LinkML are both
@@ -49,19 +49,42 @@ you may omit the `--dev` flag from the pipenv installation.
 LinkML is pretty cool, but can be overwhelming to users that are not familiar
 with the language (or, at least it was overwhelming to me 😵).
 
-This section is an attempt to describe and link the salient elements of a LinkML
-model in plain english.
-
 While a YAML doesn't have a traditional header, there are a number of attributes
 found throughout the LinkML and BioLink Model documentation that need to be
 specified before you can get to the fun part of modeling the schema.
 
+This section is an attempt to describe and link the salient elements of a LinkML
+schema in plain english. When referencing the LinkML documentation, you will
+note that LinkML is often referred to as BioLinkML, or _blml_. For the reasons
+indicated [above](#the-biolinkml-package), these terms are to be treated as
+synonymous with LinkML.
+
+All of the attributes for a LinkML schema definition are summarized
+[here](https://biolink.github.io/biolinkml/docs/SchemaDefinition), and we will
+go into a few of the specifics on these fields below.
+
 ### id
-The very first line of every model should be the id:
+The very first line of every LinkML schema should be the `id`, which is one of
+two required fields for a LinkML schema:
 ```yaml
 id: https://example.org/example-schema
 ```
-The purpose of this id is ...
+The purpose of [the id field](https://biolink.github.io/biolinkml/docs/id)
+is to designate the official [URI]() for the schema.
+
+This id is for locating information about the schema document. It should direct
+people to documentation on the schema (for VRS the id would be
+https://vrs.ga4gh.org).
+
+### name
+The only other required field is the schema `name`. In markdown, this is
+specified as `SchemaDefinition->name`, to differentiate it from the `name`
+slot in other classes. In LinkML, slots are defined separate from classes and
+can have [custom definitions](https://biolink.github.io/biolinkml/docs/slot_usage.html)
+based on the class context in which it is used.
+
+### Other
+
 
 ## Related reading
 - [General Design of LinkML](https://github.com/biolink/biolinkml/blob/master/SPECIFICATION.md)
