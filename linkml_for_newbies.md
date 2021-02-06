@@ -112,6 +112,11 @@ default_range: string
 `default_curi_maps` is a list of predefined prefixes specified at the [prefix
 commons](https://github.com/prefixcommons/biocontext/tree/master/registry).
 
+`emit_prefixes` allow you to add prefixes specified by these maps as a simple
+list of namespaces. Precedence is set by the order of `default_curi_maps`.
+
+**TODO:** Figure out if earlier or later list items have precedence.
+
 ### imports
 Imports are used to import other schema into the main schema document. One of
 the objectives of this repository is to separate out schema components into
