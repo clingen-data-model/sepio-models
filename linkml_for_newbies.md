@@ -100,8 +100,9 @@ The CURIE `wgs:lat` will expand to http://www.w3.org/2003/01/geo/wgs84_pos#lat.
 Imports are used to import other schema into the main schema document. One of
 the objectives of this repository is to separate out schema components into
 separate modules around their intended use, and so we will need to implement
-imports. The BioLink Model repo imports `biolinkml:types` to [refer to the
-LinkML types](https://github.com/biolink/biolink-model/blob/master/biolink-model.yaml#L172-L173).
+imports. The BioLink Model repo [imports
+`biolinkml:types`](https://github.com/biolink/biolink-model/blob/master/biolink-model.yaml#L172-L173)
+to [refer to the LinkML types](https://github.com/biolink/biolinkml/blob/master/includes/types.py).
 
 ```yaml
 prefixes:
