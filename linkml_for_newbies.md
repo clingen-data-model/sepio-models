@@ -91,7 +91,7 @@ Imports are meant to import other schema into the main schema document. One of
 the objectives of this repository is to separate out schema components into
 separate modules around their intended use. The BioLink Model
 repo imports `biolinkml:types` to [refer to the LinkML
-types] (https://github.com/biolink/biolink-model/blob/master/biolink-model.yaml#L172-L173).
+types](https://github.com/biolink/biolink-model/blob/master/biolink-model.yaml#L172-L173).
 
 ```
 
