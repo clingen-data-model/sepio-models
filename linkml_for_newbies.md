@@ -83,8 +83,8 @@ slot in other classes. In LinkML, slots are defined separate from classes and
 can have [custom definitions](https://biolink.github.io/biolinkml/docs/slot_usage.html)
 based on the class context in which it is used.
 
-### Other
-
+The name is a space separated short label for the document, such as
+`example schema` or `Bob's schema for the UK`.
 
 ## Related reading
 - [General Design of LinkML](https://github.com/biolink/biolinkml/blob/master/SPECIFICATION.md)
