@@ -138,5 +138,18 @@ resolve](https://biolink.github.io/biolinkml/includes/types), so how do those
 types compile into BioLink Model artifacts? Or is it a false assumption that
 they do at all?
 
+### slots
+Slots are one of the three primary components for LinkML schemas. They are
+essentially the attributes specified by classes, and are separately defined
+outside of class definitions.
+
+More on [slot definitions](https://biolink.github.io/biolinkml/docs/SlotDefinition).
+
+An important note is that slots must be contextualized if their definition
+changes based upon what class is using the slot.
+
+When defining a slot, it would be useful to define an enumerable of elements.
+This is [not yet implemented](https://github.com/biolink/biolinkml/issues/170).
+
 ## Related reading
 - [General Design of LinkML](https://github.com/biolink/biolinkml/blob/master/SPECIFICATION.md)
