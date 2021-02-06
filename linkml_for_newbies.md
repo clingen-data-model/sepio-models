@@ -86,15 +86,30 @@ based on the class context in which it is used.
 The name is a space separated short label for the document, such as
 `example schema` or `Bob's schema for the UK`.
 
-### imports
-Imports are meant to import other schema into the main schema document. One of
-the objectives of this repository is to separate out schema components into
-separate modules around their intended use. The BioLink Model
-repo imports `biolinkml:types` to [refer to the LinkML
-types](https://github.com/biolink/biolink-model/blob/master/biolink-model.yaml#L172-L173).
-
+### prefixes
+Prefixes are used to transform CURIEs into URIs. For example:
+```yaml
+prefixes:
+  biolinkml: https://w3id.org/biolink/biolinkml/
+  wgs: http://www.w3.org/2003/01/geo/wgs84_pos#
+  qud: http://qudt.org/1.1/schema/qudt#
 ```
+The CURIE `wgs:lat` will expand to http://www.w3.org/2003/01/geo/wgs84_pos#lat.
 
+### imports
+Imports are used to import other schema into the main schema document. One of
+the objectives of this repository is to separate out schema components into
+separate modules around their intended use, and so we will need to implement
+imports. The BioLink Model repo imports `biolinkml:types` to [refer to the
+LinkML types](https://github.com/biolink/biolink-model/blob/master/biolink-model.yaml#L172-L173).
+
+```yaml
+prefixes:
+  biolinkml: https://w3id.org/biolink/biolinkml/
+
+imports:
+  - biolinkml:types
+```
 
 ## Related reading
 - [General Design of LinkML](https://github.com/biolink/biolinkml/blob/master/SPECIFICATION.md)
